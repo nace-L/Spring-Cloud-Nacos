@@ -16,7 +16,8 @@ public class ConfigController {
     UserService userService;
 
     @GetMapping("/config")
-    public ResultDTO<ConfigEntity> getConfig(){
-        return ResultDTO.ok(userService.getUserConfig());
+    public ResultDTO<ConfigEntity> getConfig() throws RuntimeException{
+        throw new RuntimeException("数据库异常");
+//        return ResultDTO.ok(userService.getUserConfig());
     }
 }
